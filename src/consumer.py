@@ -16,12 +16,6 @@ while True:
     print("*" * 88)
     for message in consumer:
         print(
-            "%s:%d:%d: key=%s value=%s"
-            % (
-                message.topic,
-                message.partition,
-                message.offset,
-                message.key,
-                message.value,
-            )
+            f"{message.topic}:{message.partition}:{message.offset}: "
+            f"key={message.key} value={message.value}"
         )
