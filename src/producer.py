@@ -6,7 +6,9 @@ from utils import TOPIC
 
 
 producer = KafkaProducer(
-    bootstrap_servers=BOOTSTRAP_SERVERS, value_serializer=json_to_bytes, retries=3
+    bootstrap_servers=BOOTSTRAP_SERVERS,
+    value_serializer=json_to_bytes,
+    retries=3,
 )
 
 # Asynchronous by default
