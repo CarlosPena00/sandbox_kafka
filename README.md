@@ -36,18 +36,24 @@ The kafka-*.sh are available inside kafka docker or in bin folder.
 
 ```sh
 # Create topic
-kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic my_kafka_topic
+kafka-topics --create --zookeeper zookeeper-1:32181 --replication-factor 1 --partitions 1 --topic my_kafka_topic2
 
 # List topics
-kafka-topics.sh --list --zookeeper zookeeper:2181
+kafka-topics --list --zookeeper zookeeper-1:32181
+
+# Describe topics
+kafka-topics --describe --bootstrap-server localhost:9092
+
+# Topics in python
+python src/topic.py
 
 # Producer in cmd (each line is a msg)
-kafka-console-producer.sh --broker-list localhost:9092 --topic my_kafka_topic
+kafka-console-producer --broker-list localhost:9092 --topic my_kafka_topic
 # Producer in Python
 python src/producer.py
 
 # Consumer in cmd (from beginning)
-kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my_kafka_topic --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 --topic my_kafka_topic --from-beginning
 # Consumer in Python
 python src/consumer.py
 ```
