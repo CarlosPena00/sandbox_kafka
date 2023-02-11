@@ -45,15 +45,15 @@ kafka-topics --list --zookeeper zookeeper-1:32181
 kafka-topics --describe --bootstrap-server localhost:9092
 
 # Topics in python
-python src/topic.py
+python src/simple/topic.py
 
 # Producer in cmd (each line is a msg)
 kafka-console-producer --broker-list localhost:9092 --topic my_kafka_topic
 # Producer in Python
-python src/producer.py
+python src/simple/producer.py
 
 # Consumer in cmd (from beginning)
 kafka-console-consumer --bootstrap-server localhost:9092 --topic my_kafka_topic --from-beginning
 # Consumer in Python
-python src/consumer.py
+python src/simple/consumer.py
 ```
