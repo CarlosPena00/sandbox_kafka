@@ -9,7 +9,7 @@ consumer = KafkaConsumer(
     group_id="consumer",
     bootstrap_servers=BOOTSTRAP_SERVERS,
     value_deserializer=bytes_to_json,
-    consumer_timeout_ms=2000,
+    consumer_timeout_ms=500,
     max_poll_records=1,
 )
 while True:

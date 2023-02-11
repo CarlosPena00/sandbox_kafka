@@ -1,7 +1,7 @@
 import json
 
-TOPIC = "my_kafka_topic"
-BOOTSTRAP_SERVERS = ["localhost:9092"]
+TOPIC = "my_topic"
+BOOTSTRAP_SERVERS = ["localhost:9092", "localhost:9093", "localhost:9094"]
 
 
 def json_to_bytes(j) -> bytes:
